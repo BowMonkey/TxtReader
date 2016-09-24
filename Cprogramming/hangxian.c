@@ -1,37 +1,6 @@
-
-#include"head.h"
-
-
-/*背景音乐*/
-void BGM(void)
-{
-	PlaySound(TEXT("TheBeginning.wav"), NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
-}
-
-
-/*显示当前时间*/
-void Ptime()
-{
-	char * wday[] = { "星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六" };
-	time_t t;
-	struct tm *p;
-	t = time(NULL);
-	p = gmtime(&t);
-	printf("现在时间是：");
-	printf("%d年%2d月%2d日", (1900 + p->tm_year), (1 + p->tm_mon), p->tm_mday);
-	printf(" %s ", wday[p->tm_wday]);
-	printf("%02d:%02d:%02d\n", (8 + p->tm_hour), p->tm_min, p->tm_sec);
-}
-
-
-/*移动光标到指定位置*/
-void gotoxy(int x, int y)
-{
-	COORD coord; // coordinates  
-	coord.X = x; coord.Y = y; // X and Y coordinates  
-	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord); // moves to the coordinates  
-}
-
+#include<stdio.h>
+#include<stdlib.h>
+#include<Windows.h>
 
 /*逐行显示给定的txt文件内容*/
 void hangxian(void)
@@ -46,7 +15,6 @@ void hangxian(void)
 	if (NULL == (fp = fopen(filename, "r")))
 	{//打开文件，并判断是否有打开错误
 		printf("failed to open %s.txt\n", filename);
-		return 0;
 	}
 	while ((ch = fgetc(fp)) != EOF)
 	{

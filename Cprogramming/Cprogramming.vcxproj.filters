@@ -15,15 +15,42 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="practise.c">
+    <ClCompile Include="BGM.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="hanshu.c">
+    <ClCompile Include="Ptime.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="main.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gotoxy.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="fengmian.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hangxian.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="head.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BGM.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Ptime.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="gotoxy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fengmian.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="hangxian.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
