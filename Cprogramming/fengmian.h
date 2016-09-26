@@ -1,2 +1,2 @@
 #pragma once
-extern void fengmian(void);
+extern int fengmian(void);

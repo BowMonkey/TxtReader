@@ -10,8 +10,15 @@ void hangxian(void)
 	char hangxian[1000] = { '\0' };
 	char filename[100];
 	int i = 0;
+
+	system("cls");
+
 	printf("请输入你要打开的文件名及路径，如c:\\temp.txt\n");
-	gets(filename);  //这句要用户输入文件名 
+	//gets(filename);  //这句要用户输入文件名 
+	scanf("%s", filename);
+
+	system("cls");
+
 	if (NULL == (fp = fopen(filename, "r")))
 	{//打开文件，并判断是否有打开错误
 		printf("failed to open %s.txt\n", filename);
@@ -24,6 +31,7 @@ void hangxian(void)
 		Sleep(2000);
 	}
 	fclose(fp);
+	system("pause");
 	printf("\n");
 }
 
@@ -52,4 +60,3 @@ printf("\n");
 fclose(fp);
 }
 */
-
